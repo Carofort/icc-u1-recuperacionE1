@@ -1,4 +1,5 @@
 
+import Controllers.PersonaController;
 import Models.Persona;
 
 public class App {
@@ -35,6 +36,28 @@ public class App {
                                 new Persona("Lorena", 23),
                                 new Persona("Miguel", 52)
                 };
+
+                PersonaController ordenador = new PersonaController();
+
+                Persona[] arreglo = ordenador.sortByAgeSelection(personas);
+                ordenador.showPeople(arreglo);
+                int resultado = ordenador.searchBinaryByAge(arreglo, 25);
+                if(resultado != -1){
+                        System.out.println("Se encuentra en la posición: " + resultado);
+                }else{
+                        System.out.println("No se encuentra en el arreglo de personas");
+                }
+             
+                Persona[] arreglo2 = ordenador.sortByNameWithInsertion(personas);
+                ordenador.showPeople(arreglo2);
+                int resultado2 = ordenador.searchBinaryByName(personas, "Anais");
+                if(resultado2 != -1){
+                        System.out.println("Se encuentra en la posición: " + resultado);
+                }else{
+                        System.out.println("No se encuentra en el arreglo de personas");
+                }
+             
+
 
                 /// TODOS los métodos deben ser implementados en la clase PersonaController
                 // Crear una instancia de la clase PersonaController y llamar a los métodos
