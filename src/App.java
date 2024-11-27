@@ -43,18 +43,21 @@ public class App {
                 ordenador.showPeople(arreglo);
                 int resultado = ordenador.searchBinaryByAge(arreglo, 25);
                 if(resultado != -1){
-                        System.out.println("Se encuentra en la posición: " + resultado);
+                        System.out.println("La edad se encuentra en la posición: " + resultado);
+                        System.out.println("Anais, 25");
                 }else{
-                        System.out.println("No se encuentra en el arreglo de personas");
+                        System.out.println("La edad no se encuentra en el arreglo de personas");
                 }
+                
              
-                Persona[] arreglo2 = ordenador.sortByNameWithInsertion(personas);
-                ordenador.showPeople(arreglo2);
+                ordenador.sortByNameWithInsertion(personas);
+                ordenador.showPeople(personas);
                 int resultado2 = ordenador.searchBinaryByName(personas, "Anais");
                 if(resultado2 != -1){
-                        System.out.println("Se encuentra en la posición: " + resultado);
+                        System.out.println("El nombre encuentra en la posición: " + resultado2);
+                        System.out.println("Anais, 25");
                 }else{
-                        System.out.println("No se encuentra en el arreglo de personas");
+                        System.out.println("El nombre no se encuentra en el arreglo de personas");
                 }
              
 
